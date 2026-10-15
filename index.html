@@ -110,6 +110,7 @@ form{display:flex;flex-direction:column;gap:18px}
 .terms{margin:24px 0 0;padding:0;list-style:none;display:flex;flex-direction:column}
 .terms li{padding:16px 0;border-bottom:1px solid var(--line);display:flex;flex-wrap:wrap;gap:6px 24px}
 .terms b{flex:0 0 220px;font-weight:500}.terms span{flex:1 1 320px;color:var(--ink2)}
+.extra{margin-top:32px;padding-top:24px;border-top:1px solid var(--line);max-width:560px}.extra-row{display:flex;gap:10px}.extra-row input{flex:1;min-width:0}.picked.custom{background:var(--white);color:var(--green);border:1px dashed var(--green)}
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "TravelAgency", "name": "Wishlist Safari", "url": "https://wishlistsafari.com/", "email": "hello@wishlistsafari.com", "description": "Plan an African safari around the wildlife you most want to see. Species-first matching to independent camps in South Africa, Namibia, Botswana, Zimbabwe and Zambia.", "areaServed": ["United States", "United Kingdom", "South Africa"], "sameAs": ["https://www.instagram.com/wishlistsafari", "https://www.tiktok.com/@wishlistsafari"]}</script>
 </head>
@@ -144,6 +145,11 @@ form{display:flex;flex-direction:column;gap:18px}
 </div>
 <div class="wishbar" id="wishbar" aria-live="polite"></div>
 <div class="groups" id="groups"></div>
+<div class="extra">
+<label for="x-in" class="label">Not on the list?</label>
+<p class="note" style="margin:4px 0 10px">Add any animal or bird you're hoping to see, and your specialist will advise where to go.</p>
+<div class="extra-row"><input id="x-in" type="text" placeholder="e.g. nyala, honeyguide" autocomplete="off"><button type="button" class="btn btn-dark" id="x-add">Add</button></div>
+</div>
 <p class="note" style="margin:24px 0 0"><span class="rare">◆</span> marks a rarity: harder to see, and the reason specialists exist.</p>
 </div></div></section>
 
@@ -237,10 +243,21 @@ const DATA = {"groups": [{"name": "Big cats and predators", "items": [{"n": "Lio
   var all = {}; DATA.groups.forEach(function(g){ g.items.forEach(function(i){ all[i.n] = i; }); });
   picked = picked.filter(function(n){ return all[n]; });
   try { var addSp = new URLSearchParams(location.search).get('add'); if (addSp && all[addSp] && picked.indexOf(addSp) < 0) { picked.push(addSp); try { localStorage.setItem(KEY, JSON.stringify(picked)); } catch (e) {} } } catch (e) {}
+  var KEY2 = 'ws-extra', extra = [];
+  try { extra = JSON.parse(localStorage.getItem(KEY2) || '[]') || []; } catch (e) { extra = []; }
   var chosen = null, query = '';
   var $ = function(id){ return document.getElementById(id); };
   function el(tag, attrs, text){ var e = document.createElement(tag); for (var k in (attrs||{})) e.setAttribute(k, attrs[k]); if (text != null) e.textContent = text; return e; }
-  function save(){ try { localStorage.setItem(KEY, JSON.stringify(picked)); } catch (e) {} }
+  function save(){ try { localStorage.setItem(KEY, JSON.stringify(picked)); localStorage.setItem(KEY2, JSON.stringify(extra)); } catch (e) {} }
+  function addExtra(name){
+    name = (name || '').trim().slice(0, 60); if (!name) return;
+    var lower = name.toLowerCase(), match = null;
+    Object.keys(all).forEach(function(k){ if (k.toLowerCase() === lower) match = k; });
+    if (match) { if (picked.indexOf(match) < 0) picked.push(match); }
+    else if (!extra.some(function(x){ return x.toLowerCase() === lower; })) extra.push(name);
+    chosen = null; save(); render();
+  }
+  function removeExtra(n){ extra = extra.filter(function(x){ return x !== n; }); save(); render(); }
   function toggle(n){ var i = picked.indexOf(n); if (i >= 0) picked.splice(i, 1); else picked.push(n); chosen = null; save(); render(); }
 
   function renderGroups(){
@@ -260,20 +277,31 @@ const DATA = {"groups": [{"name": "Big cats and predators", "items": [{"n": "Lio
       });
       wrap.appendChild(chips); box.appendChild(wrap);
     });
-    if (!any) box.appendChild(el('p', {'class':'note'}, 'No species match "' + query + '". Try another name, or tell us in your enquiry.'));
+    if (!any) {
+      var nm = el('p', {'class':'note'}, 'No species match "' + query + '". ');
+      var ab = el('button', {'type':'button','class':'textbtn'}, 'Add "' + query.trim() + '" to your wishlist');
+      ab.addEventListener('click', function(){ addExtra(query); query = ''; $('q').value = ''; renderGroups(); });
+      nm.appendChild(ab); box.appendChild(nm);
+    }
   }
 
   function renderWishbar(){
     var bar = $('wishbar'); bar.textContent = '';
-    bar.appendChild(el('span', {'class':'label-text'}, picked.length ? 'Your wishlist (' + picked.length + ')' : 'Your wishlist is empty. Tap species below.'));
+    var total = picked.length + extra.length;
+    bar.appendChild(el('span', {'class':'label-text'}, total ? 'Your wishlist (' + total + ')' : 'Your wishlist is empty. Tap species below.'));
     picked.forEach(function(n){
       var b = el('button', {'type':'button','class':'picked','aria-label':'Remove ' + n}, n + ' ✕');
       b.addEventListener('click', function(){ toggle(n); });
       bar.appendChild(b);
     });
-    if (picked.length) {
+    extra.forEach(function(n){
+      var b = el('button', {'type':'button','class':'picked custom','aria-label':'Remove ' + n}, n + ' ✕');
+      b.addEventListener('click', function(){ removeExtra(n); });
+      bar.appendChild(b);
+    });
+    if (total) {
       var c = el('button', {'type':'button','class':'textbtn'}, 'Clear all');
-      c.addEventListener('click', function(){ picked = []; chosen = null; save(); render(); });
+      c.addEventListener('click', function(){ picked = []; extra = []; chosen = null; save(); render(); });
       bar.appendChild(c);
     } else {
       var t = el('button', {'type':'button','class':'textbtn'}, 'Try an example wishlist');
@@ -300,7 +328,8 @@ const DATA = {"groups": [{"name": "Big cats and predators", "items": [{"n": "Lio
 
   function renderResults(res){
     var box = $('results'); box.textContent = '';
-    if (!picked.length) { box.appendChild(el('div', {'class':'empty'}, 'Pick at least one species above to see where to go.')); return; }
+    var extraNote = extra.length ? 'Not in our guides yet: ' + extra.join(', ') + '. Your specialist will advise where to see them.' : '';
+    if (!picked.length) { box.appendChild(el('div', {'class':'empty'}, extra.length ? extraNote : 'Pick at least one species above to see where to go.')); return; }
     var comboName = res.combo.map(function(r){ return r.name + ' (' + r.country + ')'; }).join(' + ');
     var cov = picked.length - res.left.length;
     var c = el('div', {'class':'combo'});
@@ -322,19 +351,23 @@ const DATA = {"groups": [{"name": "Big cats and predators", "items": [{"n": "Lio
       card.appendChild(b); cards.appendChild(card);
     });
     box.appendChild(cards);
+    if (extraNote) box.appendChild(el('p', {'class':'note', 'style':'margin:16px 0 0'}, extraNote));
   }
 
   function renderSummary(res){
     var where = chosen || res.combo.map(function(r){ return r.name + ' (' + r.country + ')'; }).join(' + ') || 'To be advised';
-    $('sum-wish').textContent = picked.length ? picked.join(', ') : 'None yet';
+    var list = picked.concat(extra.map(function(x){ return x + ' (your addition)'; }));
+    $('sum-wish').textContent = list.length ? list.join(', ') : 'None yet';
     $('sum-where').textContent = where;
-    $('f-wishlist').value = picked.join(', ');
+    $('f-wishlist').value = picked.join(', ') + (extra.length ? (picked.length ? '; ' : '') + 'Not on the list: ' + extra.join(', ') : '');
     $('f-places').value = where;
   }
 
   function render(){ var res = compute(); renderWishbar(); renderGroups(); renderResults(res); renderSummary(res); }
 
   $('q').addEventListener('input', function(e){ query = e.target.value; renderGroups(); });
+  $('x-add').addEventListener('click', function(){ addExtra($('x-in').value); $('x-in').value = ''; });
+  $('x-in').addEventListener('keydown', function(e){ if (e.key === 'Enter') { e.preventDefault(); addExtra($('x-in').value); $('x-in').value = ''; } });
 
   function makeCode(){
     var d = new Date(), abc = 'ABCDEFGHJKMNPQRSTUVWXYZ23456789', s = '';
@@ -346,7 +379,7 @@ const DATA = {"groups": [{"name": "Big cats and predators", "items": [{"n": "Lio
   form.addEventListener('input', function(){ err.hidden = true; });
   form.addEventListener('submit', function(e){
     e.preventDefault();
-    if (!picked.length) return fail('Add at least one species to your wishlist first.');
+    if (!picked.length && !extra.length) return fail('Add at least one species to your wishlist first.');
     if (!$('f-name').value.trim()) return fail('Please add your name.');
     if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test($('f-email').value.trim())) return fail('Please add a valid email address.');
     if (!$('f-consent').checked) return fail('Please tick the box so we can share your wishlist with a specialist.');
@@ -357,7 +390,7 @@ const DATA = {"groups": [{"name": "Big cats and predators", "items": [{"n": "Lio
       .catch(function(){ fail('We could not send this just now. Please try again, or email your wishlist to hello@wishlistsafari.com.'); })
       .then(function(){ btn.disabled = false; btn.textContent = 'Request my itinerary'; });
   });
-  $('restart').addEventListener('click', function(){ form.reset(); picked = []; chosen = null; save(); $('success').hidden = true; form.hidden = false; render(); document.getElementById('planner').scrollIntoView(); });
+  $('restart').addEventListener('click', function(){ form.reset(); picked = []; extra = []; chosen = null; save(); $('success').hidden = true; form.hidden = false; render(); document.getElementById('planner').scrollIntoView(); });
   render();
 })();
 </script>
