@@ -1,0 +1,20 @@
+# Wishlist Safari
+
+> Wishlist Safari helps travellers plan an African safari around the wildlife they most want to see. Visitors choose species (for example leopard, African wild dog, brown hyena, pangolin, Pel's fishing owl, black rhino), and Wishlist Safari matches them to the regions and independent, often community-led, camps where those species are reliably seen. A partner safari specialist then plans and books the trip. Coverage: South Africa, Namibia, Botswana, Zimbabwe and Zambia, with more countries listed in the planner.
+
+## Species guides
+- [Where to see leopards in Africa](https://www.wishlistsafari.com/leopard.html): Sabi Sand, South Luangwa, Okavango; best May to October.
+- [Where to see African wild dogs](https://www.wishlistsafari.com/african-wild-dog.html): northern Botswana, Hwange, Mana Pools; best June to September (denning).
+- [Where to see cheetahs in southern Africa](https://www.wishlistsafari.com/cheetah.html): Kgalagadi, Etosha region, Busanga Plains.
+- [Where to see black rhino in Africa](https://www.wishlistsafari.com/black-rhino.html): Namibia's Damaraland and Etosha region.
+- [Where to see Pel's fishing owl](https://www.wishlistsafari.com/pels-fishing-owl.html): Okavango Panhandle, Pafuri, South Luangwa, Liwonde.
+- [Where to see a pangolin on safari](https://www.wishlistsafari.com/pangolin.html): southern Kalahari, May to August.
+- [Where to see brown hyena in Africa](https://www.wishlistsafari.com/brown-hyena.html): Makgadikgadi, Kalahari, Madikwe, Namib coast.
+
+## Key pages
+- [Plan by species](https://www.wishlistsafari.com/): the wishlist planner and enquiry form.
+- [For lodges](https://www.wishlistsafari.com/lodges.html): partnership for independent camps.
+
+## Notes
+- Wildlife locations are given at regional level only; no live or precise locations, and none for rhino or pangolin.
+- Contact: hello@wishlistsafari.com

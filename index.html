@@ -111,6 +111,7 @@ form{display:flex;flex-direction:column;gap:18px}
 .terms li{padding:16px 0;border-bottom:1px solid var(--line);display:flex;flex-wrap:wrap;gap:6px 24px}
 .terms b{flex:0 0 220px;font-weight:500}.terms span{flex:1 1 320px;color:var(--ink2)}
 </style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "TravelAgency", "name": "Wishlist Safari", "url": "https://www.wishlistsafari.com/", "email": "hello@wishlistsafari.com", "description": "Plan an African safari around the wildlife you most want to see. Species-first matching to independent camps in South Africa, Namibia, Botswana, Zimbabwe and Zambia.", "areaServed": ["United States", "United Kingdom", "South Africa"], "sameAs": ["https://www.instagram.com/wishlistsafari", "https://www.tiktok.com/@wishlistsafari"]}</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -208,13 +209,16 @@ form{display:flex;flex-direction:column;gap:18px}
 <p style="color:var(--ink2);margin:8px 0 0">Where and when to see Africa's most wanted, and hardest to find.</p>
 <div class="guides">
 <a href="brown-hyena.html">Brown hyena <span class="rare">→</span></a>
+<a href="leopard.html">Leopard <span class="rare">→</span></a>
+<a href="african-wild-dog.html">African wild dog <span class="rare">→</span></a>
+<a href="cheetah.html">Cheetah <span class="rare">→</span></a>
+<a href="black-rhino.html">Black rhino <span class="rare">→</span></a>
+<a href="pels-fishing-owl.html">Pel&#x27;s fishing owl <span class="rare">→</span></a>
+<a href="pangolin.html">Pangolin <span class="rare">→</span></a>
 <span class="soon">Shoebill <small>Coming soon</small></span>
-<span class="soon">Pangolin <small>Coming soon</small></span>
-<span class="soon">African wild dog <small>Coming soon</small></span>
-<span class="soon">Pel's fishing owl <small>Coming soon</small></span>
-<span class="soon">Mountain gorilla <small>Coming soon</small></span>
 <span class="soon">Aardvark <small>Coming soon</small></span>
-<span class="soon">Leopard <small>Coming soon</small></span>
+<span class="soon">Black-maned Kalahari lion <small>Coming soon</small></span>
+<span class="soon">Desert-adapted elephant <small>Coming soon</small></span>
 </div>
 </div></section>
 </main>
@@ -232,6 +236,7 @@ const DATA = {"groups": [{"name": "Big cats and predators", "items": [{"n": "Lio
   try { picked = JSON.parse(localStorage.getItem(KEY) || '[]') || []; } catch (e) { picked = []; }
   var all = {}; DATA.groups.forEach(function(g){ g.items.forEach(function(i){ all[i.n] = i; }); });
   picked = picked.filter(function(n){ return all[n]; });
+  try { var addSp = new URLSearchParams(location.search).get('add'); if (addSp && all[addSp] && picked.indexOf(addSp) < 0) { picked.push(addSp); try { localStorage.setItem(KEY, JSON.stringify(picked)); } catch (e) {} } } catch (e) {}
   var chosen = null, query = '';
   var $ = function(id){ return document.getElementById(id); };
   function el(tag, attrs, text){ var e = document.createElement(tag); for (var k in (attrs||{})) e.setAttribute(k, attrs[k]); if (text != null) e.textContent = text; return e; }
