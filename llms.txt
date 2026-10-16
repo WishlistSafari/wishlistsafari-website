@@ -20,7 +20,6 @@
 
 ## Key pages
 - [Plan by species](https://wishlistsafari.com/): the wishlist planner and enquiry form.
-- [For lodges](https://wishlistsafari.com/lodges.html): partnership for independent camps.
 
 ## Notes
 - Wildlife locations are given at regional level only; no live or precise locations, and none for rhino or pangolin.
