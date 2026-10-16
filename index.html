@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Wishlist Safari | Plan a safari around the wildlife you want to see</title>
-<meta name="description" content="Choose the animals and birds you most want to see in Africa. We match your wishlist to the places and independent camps where they are reliably found, and a specialist plans the trip.">
+<meta name="description" content="Choose the animals and birds you most want to see in Africa. We match your wishlist to the places and independent camps where they are reliably found, and introduce you directly to the camps themselves.">
 <link rel="canonical" href="https://wishlistsafari.com/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Wishlist Safari">
 <meta property="og:title" content="Wishlist Safari | Plan a safari around the wildlife you want to see">
-<meta property="og:description" content="Choose the animals and birds you most want to see in Africa. We match your wishlist to the places and independent camps where they are reliably found, and a specialist plans the trip.">
+<meta property="og:description" content="Choose the animals and birds you most want to see in Africa. We match your wishlist to the places and independent camps where they are reliably found, and introduce you directly to the camps themselves.">
 <meta property="og:url" content="https://wishlistsafari.com/">
 <link rel="icon" href="/favicon.ico" sizes="48x48">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -155,7 +155,7 @@ form{display:flex;flex-direction:column;gap:18px}
 <section class="hero"><div class="wrap hero-grid">
 <div>
 <h1>Name the animal.<br><em>We'll find the place.</em></h1>
-<p class="lede">Choose the wildlife you most want to see. We match your wishlist to the places, and the independent camps, where guides record it most often. Then a trusted safari specialist plans the trip.</p>
+<p class="lede">Choose the wildlife you most want to see. We match your wishlist to the places, and the independent camps, where guides record it most often. Then we introduce you directly to the camps' own reservations teams.</p>
 </div>
 <div class="stats">
 <p><b>92</b><span>Species</span></p>
@@ -173,16 +173,16 @@ form{display:flex;flex-direction:column;gap:18px}
 <div class="groups" id="groups"></div>
 <div class="extra">
 <label for="x-in" class="label">Not on the list?</label>
-<p class="note" style="margin:4px 0 10px">Add any animal or bird you're hoping to see, and your specialist will advise where to go.</p>
+<p class="note" style="margin:4px 0 10px">Add any animal or bird you're hoping to see, and we'll find the camps that can show it to you.</p>
 <div class="extra-row"><input id="x-in" type="text" placeholder="e.g. nyala, honeyguide" autocomplete="off"><button type="button" class="btn btn-dark" id="x-add">Add</button></div>
 </div>
-<p class="note" style="margin:24px 0 0"><span class="rare">◆</span> marks a rarity: harder to see, and the reason specialists exist.</p>
+<p class="note" style="margin:24px 0 0"><span class="rare">◆</span> marks a rarity: harder to see, so choosing the right camp matters most.</p>
 </div></div></section>
 
 <section class="section" id="results-section"><div class="wrap">
 <p class="eyebrow">Step two</p>
 <h2>Where your wishlist comes true</h2>
-<p class="note" style="margin:8px 0 0">Places are ranked by how much of your wishlist they cover. Your specialist confirms the best camps and timing.</p>
+<p class="note" style="margin:8px 0 0">Places are ranked by how much of your wishlist they cover. The camps confirm availability and the best timing for your dates.</p>
 <div class="results-grid">
 <figure class="map" aria-label="Map of the places in our planner">
 <svg viewBox="8 -8.5 44 44" role="img" aria-label="Map of Africa south of the Sahara showing safari places"><title>Safari places on the map</title>
@@ -201,8 +201,8 @@ form{display:flex;flex-direction:column;gap:18px}
 <section id="plan" class="section"><div class="wrap plan">
 <div>
 <p class="eyebrow">Step three</p>
-<h2>Get your trip planned</h2>
-<p style="color:var(--ink2);margin:14px 0 0">Send us your wishlist and a safari specialist will come back to you with a tailored itinerary. There's no cost and no obligation to send an enquiry.</p>
+<h2>Talk to the camps directly</h2>
+<p style="color:var(--ink2);margin:14px 0 0">Send us your wishlist and we'll introduce you to the reservations teams at the camps that best match it. They come back to you with availability and rates. There's no cost and no obligation.</p>
 <div class="summary">
 <p><span>Wishlist:</span> <span id="sum-wish" style="color:var(--green)">None yet</span></p>
 <p><span>Where:</span> <span id="sum-where" style="color:var(--green)">To be advised</span></p>
@@ -224,15 +224,15 @@ form{display:flex;flex-direction:column;gap:18px}
 <div class="field"><label for="f-budget">Budget per person</label><select id="f-budget" name="budget"><option>Not sure yet</option><option>Under $5,000</option><option>$5,000 to $10,000</option><option>$10,000 to $20,000</option><option>Over $20,000</option></select></div>
 </div>
 <div class="field"><label for="f-notes">Anything else we should know?</label><textarea id="f-notes" name="notes"></textarea></div>
-<label class="check"><input type="checkbox" id="f-consent" name="consent" value="yes"><span>I agree that Wishlist Safari may share my details with a safari specialist to plan this trip, as set out in the <a href="privacy.html">privacy notice</a>.</span></label>
+<label class="check"><input type="checkbox" id="f-consent" name="consent" value="yes"><span>I agree that Wishlist Safari may share my details with the camps that match my wishlist, as set out in the <a href="privacy.html">privacy notice</a>.</span></label>
 <p class="error" id="f-error" hidden></p>
-<button class="btn btn-dark" type="submit" style="align-self:flex-start">Request my itinerary</button>
-<p class="note" style="margin:0">We earn a referral fee from the specialist or camp when you book. It never adds to your price.</p>
+<button class="btn btn-dark" type="submit" style="align-self:flex-start">Introduce me to the camps</button>
+<p class="note" style="margin:0">We earn a referral fee from the camp when you book. It never adds to your price.</p>
 </form>
 <div class="success" id="success" hidden>
 <p class="eyebrow" style="color:var(--gold)">Your reference</p>
 <p class="code" id="success-code"></p>
-<p>Thank you. A specialist will be in touch by email. Quote this reference in any conversation with them or a camp, so your trip stays linked to your wishlist.</p>
+<p>Thank you. We'll introduce you by email to the camps that best match your wishlist. Quote this reference when you talk to them, so your trip stays linked to your wishlist.</p>
 <button class="btn btn-gold" type="button" id="restart">Start another wishlist</button>
 </div>
 </div>
@@ -243,7 +243,7 @@ form{display:flex;flex-direction:column;gap:18px}
 <div class="grid4">
 <div><h3>Your wishlist</h3><p>From the Big Five to a shoebill or a Pel's fishing owl. Choose as many as you like.</p></div>
 <div><h3>Honest matching</h3><p>We match your wishlist to the places each species is reliably found, built from guides' own sighting records as our partner camps join.</p></div>
-<div><h3>A specialist plans it</h3><p>A trusted safari operator builds, books and looks after your trip, from flights to the last game drive.</p></div>
+<div><h3>Book with the camp</h3><p>We introduce you straight to each camp's own reservations team. No middleman, and you deal with the people who know the place best.</p></div>
 <div><h3>Wildlife first</h3><p>We never share live locations, and never publish where rhino or pangolin were seen.</p></div>
 </div>
 </div></section>
@@ -276,7 +276,7 @@ form{display:flex;flex-direction:column;gap:18px}
 <footer class="site-foot"><div class="wrap">
 <span><a href="mailto:hello@wishlistsafari.com">hello@wishlistsafari.com</a></span>
 <span><a href="https://www.instagram.com/wishlistsafari">Instagram</a> · <a href="https://www.tiktok.com/@wishlistsafari">TikTok</a> · <a href="privacy.html">Privacy</a></span>
-<span>We may earn a referral fee from partner camps and specialists. It never changes your price.</span>
+<span>We may earn a referral fee from partner camps. It never changes your price.</span>
 <span>© 2026 Wishlist Safari</span>
 </div></footer>
 <script>
@@ -373,7 +373,7 @@ const DATA = {"groups": [{"name": "Big cats and predators", "items": [{"n": "Lio
 
   function renderResults(res){
     var box = $('results'); box.textContent = '';
-    var extraNote = extra.length ? 'Not in our guides yet: ' + extra.join(', ') + '. Your specialist will advise where to see them.' : '';
+    var extraNote = extra.length ? 'Not in our guides yet: ' + extra.join(', ') + '. We will suggest where to see them when we introduce you to the camps.' : '';
     if (!picked.length) { box.appendChild(el('div', {'class':'empty'}, extra.length ? extraNote : 'Pick species above, or tap any dot on the map to see what lives there.')); return; }
     var comboName = res.combo.map(function(r){ return r.name + ' (' + r.country + ')'; }).join(' + ');
     var cov = picked.length - res.left.length;
@@ -391,6 +391,11 @@ const DATA = {"groups": [{"name": "Big cats and predators", "items": [{"n": "Lio
       card.appendChild(meta); card.appendChild(el('h3', null, x.r.name));
       var tags = el('div', {'class':'tags'}); x.m.forEach(function(n){ tags.appendChild(el('span', {'class':'tag'}, n)); }); card.appendChild(tags);
       if (x.miss.length) card.appendChild(el('p', {'class':'miss'}, 'Not here: ' + x.miss.join(', ')));
+      (DATA.lodges || []).filter(function(l){ return l.region === x.r.name; }).forEach(function(l){
+        var lb = el('a', {'class':'linkbtn','href':'#plan','style':'margin-bottom:10px'}, 'Enquire with ' + l.name + ' '); lb.appendChild(el('span', null, '→'));
+        lb.addEventListener('click', function(){ chosen = l.name + ', ' + x.r.name + ' (' + x.r.country + ')'; renderSummary(res); });
+        card.appendChild(lb);
+      });
       var b = el('a', {'class':'linkbtn','href':'#plan'}, 'Plan around this '); b.appendChild(el('span', null, '→'));
       b.addEventListener('click', function(){ chosen = x.r.name + ' (' + x.r.country + ')'; renderSummary(res); });
       card.appendChild(b); cards.appendChild(card);
@@ -467,7 +472,7 @@ const DATA = {"groups": [{"name": "Big cats and predators", "items": [{"n": "Lio
     if (!picked.length && !extra.length) return fail('Add at least one species to your wishlist first.');
     if (!$('f-name').value.trim()) return fail('Please add your name.');
     if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test($('f-email').value.trim())) return fail('Please add a valid email address.');
-    if (!$('f-consent').checked) return fail('Please tick the box so we can share your wishlist with a specialist.');
+    if (!$('f-consent').checked) return fail('Please tick the box so we can share your wishlist with the camps.');
     var code = makeCode(); $('f-code').value = code; renderSummary(compute());
     var btn = form.querySelector('button[type=submit]'); btn.disabled = true; btn.textContent = 'Sending…';
     fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: new URLSearchParams(new FormData(form)).toString() })
