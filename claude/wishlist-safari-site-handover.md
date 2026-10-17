@@ -8,16 +8,18 @@ Last updated: 2026-10-17
 - Owner: Jean Smyth, Cape Town. Contact: hello@wishlistsafari.com.
 - Model: direct-to-camp. Wishlist Safari introduces travellers to camps' own reservations teams. No specialist planner.
 
-## Pages (17 HTML files)
+## Pages (26 HTML files at 2026-10-17)
 - `index.html`: wishlist planner and traveller enquiry form.
 - `lodges.html`: partner camp page, noindex, linked from footer only.
 - `privacy.html`.
-- 14 species guides (listed in `llms.txt` and `sitemap.xml`): lion, leopard, elephant, mountain gorilla, cheetah, African wild dog, black rhino, shoebill, Pel's fishing owl, brown hyena, pangolin, aardvark, black-maned Kalahari lion, desert-adapted elephant.
+- `sightings.html`.
+- 22 species and guide pages (everything else, e.g. lion, leopard, meerkat, whale shark). Check `sitemap.xml` and `llms.txt` list them.
 
 ## Forms (Netlify)
 - `wishlist-enquiry` on `index.html`: traveller enquiries.
 - `partner-enquiry` on `lodges.html`: partner camp enquiries.
-- Both must keep `form-name` and the honeypot `netlify-honeypot="bot-field"`.
+- `index.html` also has a wishlist email signup form added recently. Confirm its name and honeypot at the next run.
+- Wishlist and partner forms must keep `form-name` and the honeypot `netlify-honeypot="bot-field"`.
 
 ## Rules
 - Never quote prices or commission.
