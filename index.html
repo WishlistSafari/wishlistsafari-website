@@ -138,6 +138,11 @@ form{display:flex;flex-direction:column;gap:18px}
 .map figcaption h3{font-size:22px;color:var(--green)}.map figcaption p{margin:6px 0 0}
 .map figcaption .chips{margin-top:10px}.map figcaption .chip{min-height:34px;font-size:14px;padding:0 10px}
 .map figcaption .linkbtn{display:inline-block;margin-top:12px}
+.after-results{margin-top:32px;display:flex;flex-direction:column;gap:28px}.after-results[hidden],#updates[hidden]{display:none}
+.share-row{display:flex;flex-wrap:wrap;align-items:center;gap:12px 20px}
+.updates{display:flex;flex-wrap:wrap;gap:24px 40px;padding:clamp(22px,4vw,36px);background:var(--white);border:1px solid var(--line);border-radius:4px}
+.updates>div,.updates form{flex:1 1 320px;min-width:0}.updates form{display:flex;flex-direction:column;gap:14px}
+.updates h3{font-size:clamp(26px,3vw,32px);margin-top:6px}
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "TravelAgency", "name": "Wishlist Safari", "url": "https://wishlistsafari.com/", "email": "hello@wishlistsafari.com", "description": "Plan an African safari around the wildlife you most want to see. Species-first matching to independent camps in South Africa, Namibia, Botswana, Zimbabwe and Zambia.", "areaServed": ["United States", "United Kingdom", "South Africa"], "sameAs": ["https://www.instagram.com/wishlistsafari", "https://www.tiktok.com/@wishlistsafari"]}</script>
 </head>
@@ -195,6 +200,30 @@ form{display:flex;flex-direction:column;gap:18px}
 <figcaption id="map-info" aria-live="polite"></figcaption>
 </figure>
 <div id="results" aria-live="polite"></div>
+</div>
+<div class="after-results" id="after-results" hidden>
+<div class="share-row">
+<button type="button" class="btn btn-dark" id="share-card">Share my wishlist</button>
+<button type="button" class="textbtn" id="copy-link">Copy a link to this wishlist</button>
+<span class="note" id="share-msg" aria-live="polite"></span>
+</div>
+<div class="updates">
+<div>
+<p class="eyebrow">Not ready to plan yet?</p>
+<h3>Get the best months for your wishlist</h3>
+<p class="note" style="margin:10px 0 0">We'll email you when each species on your list is easiest to see, then a short monthly note on what camps are seeing. Unsubscribe any time.</p>
+</div>
+<form id="updates" name="wishlist-updates" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate>
+<input type="hidden" name="form-name" value="wishlist-updates">
+<input type="hidden" name="wishlist" id="u-wishlist">
+<p class="hp"><label>Leave this empty <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+<div class="field"><label for="u-email">Email</label><input id="u-email" name="email" type="email" autocomplete="email"></div>
+<label class="check"><input type="checkbox" id="u-consent" name="consent" value="yes"><span>Email me about my wishlist, as set out in the <a href="privacy.html">privacy notice</a>.</span></label>
+<p class="error" id="u-error" hidden></p>
+<button class="btn btn-gold" type="submit" style="align-self:flex-start">Send me the best months</button>
+</form>
+<div id="u-success" hidden><p style="margin:0;font-size:18px;color:var(--green)">Thank you. Look out for your first email shortly.</p></div>
+</div>
 </div>
 </div></section>
 
@@ -292,6 +321,7 @@ const DATA = {"groups": [{"name": "Big cats and predators", "items": [{"n": "Lio
   var all = {}; DATA.groups.forEach(function(g){ g.items.forEach(function(i){ all[i.n] = i; }); });
   picked = picked.filter(function(n){ return all[n]; });
   try { var addSp = new URLSearchParams(location.search).get('add'); if (addSp && all[addSp] && picked.indexOf(addSp) < 0) { picked.push(addSp); try { localStorage.setItem(KEY, JSON.stringify(picked)); } catch (e) {} } } catch (e) {}
+  try { var wl = new URLSearchParams(location.search).get('w'); if (wl) { var fromLink = wl.split('|').filter(function(n){ return all[n]; }); if (fromLink.length) { picked = fromLink; try { localStorage.setItem(KEY, JSON.stringify(picked)); } catch (e) {} } } } catch (e) {}
   var KEY2 = 'ws-extra', extra = [];
   try { extra = JSON.parse(localStorage.getItem(KEY2) || '[]') || []; } catch (e) { extra = []; }
   var chosen = null, query = '';
@@ -415,6 +445,7 @@ const DATA = {"groups": [{"name": "Big cats and predators", "items": [{"n": "Lio
     $('sum-where').textContent = where;
     $('f-wishlist').value = picked.join(', ') + (extra.length ? (picked.length ? '; ' : '') + 'Not on the list: ' + extra.join(', ') : '');
     $('f-places').value = where;
+    $('u-wishlist').value = $('f-wishlist').value;
   }
 
 
@@ -457,7 +488,78 @@ const DATA = {"groups": [{"name": "Big cats and predators", "items": [{"n": "Lio
     info.appendChild(a);
   }
 
-  function render(){ var res = compute(); renderWishbar(); renderGroups(); renderResults(res); renderMap(res); renderSummary(res); }
+
+  function shareUrl(){ return location.origin + location.pathname + '?w=' + encodeURIComponent(picked.join('|')) + '#planner'; }
+  function wrapLines(ctx, text, maxW){ var words = text.split(' '), lines = [], line = ''; words.forEach(function(w){ var t = line ? line + ' ' + w : w; if (ctx.measureText(t).width > maxW && line) { lines.push(line); line = w; } else { line = t; } }); if (line) lines.push(line); return lines; }
+  function drawCard(){
+    var W = 1080, H = 1350, P = 90, c = document.createElement('canvas'); c.width = W; c.height = H;
+    var ctx = c.getContext('2d'), serif = '"Cormorant Garamond", Georgia, serif', sans = 'Jost, "Segoe UI", sans-serif';
+    var ready = (document.fonts && document.fonts.load) ? Promise.all([document.fonts.load('64px "Cormorant Garamond"'), document.fonts.load('italic 64px "Cormorant Garamond"'), document.fonts.load('28px Jost')]).catch(function(){}) : Promise.resolve();
+    return ready.then(function(){
+      ctx.fillStyle = '#142A21'; ctx.fillRect(0, 0, W, H);
+      ctx.strokeStyle = '#D9A24A'; ctx.lineWidth = 3; ctx.beginPath(); ctx.arc(P + 40, P + 40, 40, 0, Math.PI * 2); ctx.stroke();
+      ctx.textAlign = 'center'; ctx.textBaseline = 'alphabetic';
+      ctx.fillStyle = '#F4F5F1'; ctx.font = '500 44px ' + serif; ctx.fillText('W', P + 32, P + 56);
+      ctx.fillStyle = '#D9A24A'; ctx.font = 'italic 500 44px ' + serif; ctx.fillText('S', P + 52, P + 60);
+      ctx.textAlign = 'left'; ctx.fillStyle = '#F4F5F1'; ctx.font = '500 26px ' + sans;
+      if ('letterSpacing' in ctx) ctx.letterSpacing = '6px';
+      ctx.fillText('WISHLIST SAFARI', P + 104, P + 50);
+      ctx.fillStyle = '#D9A24A'; ctx.font = '500 28px ' + sans; ctx.fillText('MY SAFARI WISHLIST', P, 300);
+      if ('letterSpacing' in ctx) ctx.letterSpacing = '0px';
+      var items = picked.concat(extra), shown = items.slice(0, 9), y = 390;
+      ctx.fillStyle = '#F4F5F1';
+      shown.forEach(function(n){ var size = 64; ctx.font = '500 ' + size + 'px ' + serif; while (ctx.measureText(n).width > W - 2 * P && size > 36) { size -= 4; ctx.font = '500 ' + size + 'px ' + serif; } ctx.fillText(n, P, y); y += 76; });
+      if (items.length > shown.length) { ctx.fillStyle = '#D9A24A'; ctx.font = 'italic 500 48px ' + serif; ctx.fillText('+ ' + (items.length - shown.length) + ' more', P, y); }
+      var res = compute(), places = res.combo.map(function(r){ return r.name; });
+      ctx.strokeStyle = '#3C5247'; ctx.lineWidth = 2; ctx.beginPath(); ctx.moveTo(P, H - 330); ctx.lineTo(W - P, H - 330); ctx.stroke();
+      if (places.length) {
+        ctx.fillStyle = '#D9A24A'; ctx.font = '500 24px ' + sans; if ('letterSpacing' in ctx) ctx.letterSpacing = '5px'; ctx.fillText('WHERE IT COMES TRUE', P, H - 270); if ('letterSpacing' in ctx) ctx.letterSpacing = '0px';
+        ctx.fillStyle = '#C9D6CF'; ctx.font = '400 34px ' + sans;
+        wrapLines(ctx, places.join(' · '), W - 2 * P).slice(0, 2).forEach(function(l, i){ ctx.fillText(l, P, H - 215 + i * 46); });
+      }
+      ctx.fillStyle = '#D9A24A'; ctx.font = '500 32px ' + sans; ctx.fillText('Build yours at wishlistsafari.com', P, H - 90);
+      return new Promise(function(resolve){ c.toBlob(resolve, 'image/png'); });
+    });
+  }
+  function shareMsg(t){ $('share-msg').textContent = t; }
+  $('share-card').addEventListener('click', function(){
+    if (!picked.length && !extra.length) return;
+    shareMsg('Making your card…');
+    drawCard().then(function(blob){
+      if (!blob) throw new Error('no image');
+      var file = new File([blob], 'my-safari-wishlist.png', { type: 'image/png' });
+      var data = { files: [file], title: 'My safari wishlist', text: 'My safari wishlist. Build yours at wishlistsafari.com', url: shareUrl() };
+      if (navigator.canShare && navigator.canShare({ files: [file] })) {
+        return navigator.share(data).then(function(){ shareMsg(''); }, function(){ shareMsg(''); });
+      }
+      var a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = 'my-safari-wishlist.png';
+      document.body.appendChild(a); a.click(); a.remove();
+      shareMsg('Your card is downloaded. Post it anywhere, with the link to your wishlist.');
+    }).catch(function(){ shareMsg('Sorry, the card could not be made on this device. Try copying the link instead.'); });
+  });
+  $('copy-link').addEventListener('click', function(){
+    var url = shareUrl();
+    function done(){ shareMsg('Link copied. Send it to whoever you are travelling with.'); }
+    function fallback(){ var i = document.createElement('input'); i.value = url; document.body.appendChild(i); i.select(); try { document.execCommand('copy'); done(); } catch (e) { shareMsg(url); } i.remove(); }
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(url).then(done, fallback); else fallback();
+  });
+  (function(){
+    var uf = $('updates'), ue = $('u-error');
+    function ufail(m){ ue.textContent = m; ue.hidden = false; }
+    uf.addEventListener('input', function(){ ue.hidden = true; });
+    uf.addEventListener('submit', function(e){
+      e.preventDefault();
+      if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test($('u-email').value.trim())) return ufail('Please add a valid email address.');
+      if (!$('u-consent').checked) return ufail('Please tick the box so we can email you.');
+      var b = uf.querySelector('button[type=submit]'); b.disabled = true;
+      fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: new URLSearchParams(new FormData(uf)).toString() })
+        .then(function(r){ if (!r.ok) throw new Error(r.status); uf.hidden = true; $('u-success').hidden = false; })
+        .catch(function(){ ufail('We could not sign you up just now. Please try again in a moment.'); })
+        .then(function(){ b.disabled = false; });
+    });
+  })();
+
+  function render(){ var res = compute(); renderWishbar(); renderGroups(); renderResults(res); renderMap(res); renderSummary(res); $('after-results').hidden = !(picked.length || extra.length); }
 
   $('q').addEventListener('input', function(e){ query = e.target.value; renderGroups(); });
   $('x-add').addEventListener('click', function(){ addExtra($('x-in').value); $('x-in').value = ''; });
