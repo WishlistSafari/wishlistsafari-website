@@ -5,12 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Wishlist Sightings | For safari guides</title>
 <meta name="robots" content="noindex">
-<meta name="description" content="Share your sightings from the drive, get credited on every photo used, and earn from the Guide Fund and clip licensing.">
+<meta name="description" content="Share your sightings from the drive with your camp and Wishlist Safari, and get credited on every photo used.">
 <link rel="canonical" href="https://wishlistsafari.com/sightings.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Wishlist Safari">
 <meta property="og:title" content="Wishlist Sightings | For safari guides">
-<meta property="og:description" content="Share your sightings from the drive, get credited on every photo used, and earn from the Guide Fund and clip licensing.">
+<meta property="og:description" content="Share your sightings from the drive with your camp and Wishlist Safari, and get credited on every photo used.">
 <meta property="og:url" content="https://wishlistsafari.com/sightings.html">
 <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
 <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
@@ -138,7 +138,7 @@ form{display:flex;flex-direction:column;gap:18px}
 <section class="hero"><div class="wrap">
 <p class="eyebrow">Wishlist Sightings · For safari guides</p>
 <h1 style="margin-top:12px;font-size:clamp(40px,5.5vw,70px);max-width:16ch">Your sightings deserve to be seen.</h1>
-<p class="lede">You see more in a week than most travellers see in a lifetime. Send us your sightings and photos from the drive. Your camp gets a ready content library, travellers see what your camp really offers, and you are credited and rewarded for what you share.</p>
+<p class="lede">You see more in a week than most travellers see in a lifetime. Send us your sightings and photos from the drive. Your camp gets a ready content library, travellers see what your camp really offers, and you are credited on everything that is used.</p>
 </div></section>
 
 <section class="section"><div class="wrap">
@@ -146,17 +146,16 @@ form{display:flex;flex-direction:column;gap:18px}
 <div class="steps">
 <div class="step"><p class="eyebrow">First</p><h3>Share a sighting</h3><p>After a drive, add the species, the day and a photo or video link below. It takes under a minute, and your details are remembered on your phone for next time.</p></div>
 <div class="step"><p class="eyebrow">Then</p><h3>Your camp gets the content</h3><p>We tag and sort everything into a weekly gallery for your camp to use on its social channels and with its agents. Nothing is published without your camp's approval.</p></div>
-<div class="step"><p class="eyebrow">Finally</p><h3>You are credited and rewarded</h3><p>Your name goes on every photo we use, and you share in the Guide Fund and in any income from licensing your clips.</p></div>
+<div class="step"><p class="eyebrow">Finally</p><h3>You are credited</h3><p>Your name goes on every photo we use, on our site and on your camp's channels.</p></div>
 </div>
 </div></section>
 
 <section class="section"><div class="wrap">
-<h2>How guides are rewarded</h2>
+<h2>Why it is worth it</h2>
 <ul class="terms">
-<li><b>The Guide Fund</b><span>10% of every referral fee Wishlist Safari earns from your camp goes to the guides who shared sightings from that camp, split by the sightings accepted that month.</span></li>
-<li><b>Clip licensing</b><span>When a media outlet or channel pays to use one of your photos or videos, you receive 50% of what we are paid.</span></li>
 <li><b>Credit</b><span>Your name on every image we publish, on our site and on your camp's channels.</span></li>
-<li><b>Payment</b><span>Paid monthly once you have earnings, by bank transfer, mobile money, PayPal or Wise. We confirm your payment details privately by email or WhatsApp, never on this form.</span></li>
+<li><b>Your camp</b><span>A weekly gallery of the best sightings for its social pages and agents, without anyone having to chase for photos.</span></li>
+<li><b>Your guests</b><span>Real sightings show travellers what your camp is genuinely good at, so the guests who come are the ones who want what you show them.</span></li>
 </ul>
 </div></section>
 
@@ -190,7 +189,6 @@ form{display:flex;flex-direction:column;gap:18px}
 <div class="field"><label for="g-name">Your name</label><input id="g-name" name="guide-name" type="text" autocomplete="name"></div>
 <div class="field"><label for="g-camp">Camp or lodge</label><input id="g-camp" name="camp" type="text" autocomplete="organization"></div>
 <div class="field"><label for="g-contact">Email or WhatsApp number</label><input id="g-contact" name="contact" type="text" autocomplete="email"></div>
-<div class="field"><label for="g-pay">How you'd like to be paid</label><select id="g-pay" name="payout-method"><option>Decide later</option><option>Bank transfer</option><option>Mobile money</option><option>PayPal or Wise</option></select></div>
 <div class="field"><label for="g-species">Species</label><input id="g-species" name="species" type="text" list="species-list" autocomplete="off" placeholder="Start typing, e.g. leopard"></div>
 <div class="field"><label for="g-date">Date seen</label><input id="g-date" name="date-seen" type="date"></div>
 <div class="field"><label for="g-time">Time of day</label><select id="g-time" name="time-of-day"><option>Early morning</option><option>Late morning</option><option>Afternoon</option><option>Dusk</option><option>Night</option></select></div>
@@ -207,7 +205,7 @@ form{display:flex;flex-direction:column;gap:18px}
 </form>
 <div class="success" id="g-success" hidden>
 <h3 style="font-size:32px">Thank you</h3>
-<p>Your sighting is in. It will appear in your camp's next weekly gallery and count towards this month's Guide Fund.</p>
+<p>Your sighting is in. It will appear in your camp's next weekly gallery.</p>
 <button class="btn btn-gold" type="button" id="g-again">Share another</button>
 </div>
 </div>
@@ -224,7 +222,7 @@ form{display:flex;flex-direction:column;gap:18px}
   var f = document.getElementById('sighting'), err = document.getElementById('g-error');
   var KEY = 'ws-guide';
   function $(id){ return document.getElementById(id); }
-  try { var saved = JSON.parse(localStorage.getItem(KEY) || '{}'); ['g-name','g-camp','g-contact','g-pay'].forEach(function(id){ if (saved[id]) $(id).value = saved[id]; }); } catch (e) {}
+  try { var saved = JSON.parse(localStorage.getItem(KEY) || '{}'); ['g-name','g-camp','g-contact'].forEach(function(id){ if (saved[id]) $(id).value = saved[id]; }); } catch (e) {}
   try { $('g-date').value = new Date().toISOString().slice(0, 10); } catch (e) {}
   function fail(m){ err.textContent = m; err.hidden = false; }
   f.addEventListener('input', function(){ err.hidden = true; });
@@ -245,10 +243,10 @@ form{display:flex;flex-direction:column;gap:18px}
   f.addEventListener('submit', function(e){
     e.preventDefault();
     if (!$('g-name').value.trim() || !$('g-camp').value.trim()) return fail('Please add your name and your camp.');
-    if (!$('g-contact').value.trim()) return fail('Please add an email address or WhatsApp number so we can credit and pay you.');
+    if (!$('g-contact').value.trim()) return fail('Please add an email address or WhatsApp number so we can credit you.');
     if (!$('g-species').value.trim()) return fail('Please add the species.');
     if (!$('g-consent').checked) return fail('Please tick the box to confirm the photo is yours and you followed the rules.');
-    try { localStorage.setItem(KEY, JSON.stringify({ 'g-name': $('g-name').value, 'g-camp': $('g-camp').value, 'g-contact': $('g-contact').value, 'g-pay': $('g-pay').value })); } catch (e) {}
+    try { localStorage.setItem(KEY, JSON.stringify({ 'g-name': $('g-name').value, 'g-camp': $('g-camp').value, 'g-contact': $('g-contact').value })); } catch (e) {}
     var b = f.querySelector('button[type=submit]'); b.disabled = true; b.textContent = 'Sending…';
     var file = $('g-photo').files && $('g-photo').files[0];
     shrink(file).then(function(small){
