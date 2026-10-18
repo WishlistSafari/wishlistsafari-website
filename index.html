@@ -85,7 +85,7 @@ textarea{padding:12px;min-height:110px;resize:vertical}
 .card h3{font-size:27px;margin-top:6px}
 .tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
 .tag{padding:4px 10px;border-radius:2px;background:var(--tint);font-size:13px}
-.miss{margin:12px 0 0;font-size:13px;color:#7A4E14}
+.miss{margin:12px 0 0;font-size:13px;color:#5C6B63}
 .linkbtn{margin-top:auto;padding:18px 0 0;font:inherit;font-size:14px;letter-spacing:.12em;text-transform:uppercase;background:none;border:0;text-align:left;cursor:pointer;color:var(--green)}
 .linkbtn span{color:var(--ochre-text)}
 .plan{display:flex;flex-wrap:wrap;gap:48px;border-top:1.5px solid var(--green);padding-top:48px}
@@ -187,7 +187,7 @@ form{display:flex;flex-direction:column;gap:18px}
 <section class="section" id="results-section"><div class="wrap">
 <p class="eyebrow">Step two</p>
 <h2>Where your wishlist comes true</h2>
-<p class="note" style="margin:8px 0 0">Places are ranked by how much of your wishlist they cover. The camps confirm availability and the best timing for your dates.</p>
+<p class="note" style="margin:8px 0 0">Places are ranked by how many of your species are a highlight there. A species listed as best seen elsewhere may still turn up; it is simply more reliable somewhere else. The camps confirm availability and the best timing for your dates.</p>
 <div class="results-grid">
 <figure class="map" aria-label="Map of the places in our planner">
 <svg viewBox="8 -8.5 44 44" role="img" aria-label="Map of Africa south of the Sahara showing safari places"><title>Safari places on the map</title>
@@ -424,7 +424,7 @@ const DATA = {"groups": [{"name": "Big cats and predators", "items": [{"n": "Lio
       var meta = el('div', {'class':'card-meta'}); meta.appendChild(el('span', null, x.r.country)); meta.appendChild(el('b', null, x.m.length + ' of ' + picked.length));
       card.appendChild(meta); card.appendChild(el('h3', null, x.r.name));
       var tags = el('div', {'class':'tags'}); x.m.forEach(function(n){ tags.appendChild(el('span', {'class':'tag'}, n)); }); card.appendChild(tags);
-      if (x.miss.length) card.appendChild(el('p', {'class':'miss'}, 'Not here: ' + x.miss.join(', ')));
+      if (x.miss.length) card.appendChild(el('p', {'class':'miss'}, 'Best seen elsewhere: ' + x.miss.join(', ')));
       (DATA.lodges || []).filter(function(l){ return l.region === x.r.name; }).forEach(function(l){
         var lb = el('a', {'class':'linkbtn','href':'#plan','style':'margin-bottom:10px'}, 'Enquire with ' + l.name + ' '); lb.appendChild(el('span', null, '→'));
         lb.addEventListener('click', function(){ chosen = l.name + ', ' + x.r.name + ' (' + x.r.country + ')'; renderSummary(res); });
