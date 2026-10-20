@@ -1,7 +1,7 @@
 # Wishlist Safari site handover
 
 Source of truth for the scheduled site manager. Keep current.
-Last updated: 2026-10-17
+Last updated: 2026-10-20
 
 ## Site
 - Live at https://wishlistsafari.com, hosted on Netlify, static HTML, deployed from `main`.
@@ -18,7 +18,7 @@ Last updated: 2026-10-17
 ## Forms (Netlify)
 - `wishlist-enquiry` on `index.html`: traveller enquiries.
 - `partner-enquiry` on `lodges.html`: partner camp enquiries.
-- `index.html` also has a wishlist email signup form added recently. Confirm its name and honeypot at the next run.
+- `wishlist-updates` on `index.html`: email signup. Confirmed 2026-10-20: has `form-name` and honeypot `bot-field`.
 - Wishlist and partner forms must keep `form-name` and the honeypot `netlify-honeypot="bot-field"`.
 
 ## Rules
@@ -42,3 +42,4 @@ Last updated: 2026-10-17
 
 ## Known limits
 - The cloud sandbox blocked wishlistsafari.com on 2026-10-17, so live health checks need network access allowed.
+- 2026-10-20: still blocked (proxy 403). Netlify connector found no project matching "wishlist", so form submissions cannot be read.
