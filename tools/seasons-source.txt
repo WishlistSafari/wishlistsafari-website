@@ -1,0 +1,303 @@
+# Monthly sighting strength, January to December (3 best, 0 rarely).
+# Source: iNaturalist research-grade records (pulled 21 Oct 2026), species
+# count per month divided by all mammal and bird records in the same circle,
+# shrunk towards the yearly average (6 pseudo-observations), 3-month smoothed.
+# Pairs with fewer than 40 records were left out. FLAT = no clear season.
+# CURATED lines are seasonal knowledge for spectacles and migrants and
+# override the public records.
+Sabi Sand and Greater Kruger|Leopard=223333333232
+Sabi Sand and Greater Kruger|African wild dog=333322122233
+Sabi Sand and Greater Kruger|Bushbaby=222333323222
+Sabi Sand and Greater Kruger|Wildebeest=333333222223
+Sabi Sand and Greater Kruger|Lilac-breasted roller=233333333222
+Sabi Sand and Greater Kruger|Saddle-billed stork=222233333333
+Sabi Sand and Greater Kruger|Verreaux's eagle-owl=123332333221
+Gorongosa|African wild dog=223332223322
+Gorongosa|Lion=233332233222
+Gorongosa|Elephant=222112333211
+Volcanoes National Park|Mountain gorilla=223333223211
+Volcanoes National Park|Golden monkey=211222222332
+Nyungwe Forest|Chimpanzee=222233333321
+Nyungwe Forest|Rwenzori colobus=333322233212
+Nyungwe Forest|L'Hoest's monkey=333222333322
+Kimberley and Mokala|Aardvark=322123333333
+Kimberley and Mokala|Aardwolf=222233333333
+Kimberley and Mokala|Bat-eared fox=322233333322
+Akagera|Zebra=333333332333
+Akagera|Giraffe=333222222332
+Akagera|Nile crocodile=212223322332
+Akagera|Grey crowned crane=223332222222
+Central Kalahari|Black-maned Kalahari lion=222331123321
+Central Kalahari|Gemsbok=333322233233
+Bwindi and Mgahinga|Mountain gorilla=222333223211
+Bwindi and Mgahinga|Golden monkey=211222223332
+Bwindi and Mgahinga|L'Hoest's monkey=223333333332
+Pafuri, northern Kruger|Lion=222333332222
+Pafuri, northern Kruger|Elephant=111233333322
+Pafuri, northern Kruger|Buffalo=233333333322
+Pafuri, northern Kruger|Hippo=222322333332
+Pafuri, northern Kruger|Nile crocodile=212333233333
+Pafuri, northern Kruger|Kudu=223333333223
+Pafuri, northern Kruger|Zebra=111233333221
+Pafuri, northern Kruger|African fish eagle=223333333333
+Pafuri, northern Kruger|Saddle-billed stork=332222332223
+Pafuri, northern Kruger|Southern ground hornbill=333322223322
+Pafuri, northern Kruger|White-fronted bee-eater=333222332233
+Kibale|Chimpanzee=222322233333
+Kibale|L'Hoest's monkey=222233332211
+Southern Kalahari|Black-maned Kalahari lion=333322222223
+Southern Kalahari|Honey badger=222333333322
+Southern Kalahari|Gemsbok=223333333222
+Southern Kalahari|Brown hyena=332222333333
+Southern Kalahari|Bat-eared fox=321233321123
+Southern Kalahari|Cheetah=332333321223
+Southern Kalahari|Lion=333322222223
+Southern Kalahari|Giraffe=122333222221
+Southern Kalahari|Wildebeest=122122333222
+Southern Kalahari|Kudu=222333333332
+Southern Kalahari|Eland=222222233322
+Southern Kalahari|Martial eagle=333333222223
+Southern Kalahari|Verreaux's eagle-owl=332212322333
+Queen Elizabeth and Ishasha|Tree-climbing lions=333323322222
+Queen Elizabeth and Ishasha|African fish eagle=333333333223
+Queen Elizabeth and Ishasha|Grey crowned crane=322333212223
+Queen Elizabeth and Ishasha|Hippo=333333333212
+Cape Canopy Tour, Hottentots Holland|Cape rockjumper=321112222233
+Cape Canopy Tour, Hottentots Holland|Cape sugarbird=222222223333
+The Karoo|Aardvark=222333222211
+The Karoo|Aardwolf=222333332223
+The Karoo|Bat-eared fox=333222232223
+The Karoo|Kudu=222233322222
+The Karoo|Secretarybird=222333212222
+The Karoo|Blue crane=223322333333
+Northern Tuli and Mashatu|Elephant=222211332111
+Northern Tuli and Mashatu|Leopard=222333333333
+Northern Tuli and Mashatu|Eland=233323333221
+Northern Tuli and Mashatu|Kudu=112233333322
+Northern Tuli and Mashatu|Wildebeest=333223332222
+Northern Tuli and Mashatu|Lilac-breasted roller=233333322222
+Northern Tuli and Mashatu|White-fronted bee-eater=223332333333
+Murchison Falls and Mabamba|Uganda kob=332233222123
+Murchison Falls and Mabamba|Giraffe=222333232233
+Murchison Falls and Mabamba|Nile crocodile=333332332223
+Murchison Falls and Mabamba|Grey crowned crane=223332233222
+Murchison Falls and Mabamba|African skimmer=333221111123
+Makgadikgadi Pans|Meerkat=111123311111
+Makgadikgadi Pans|Zebra=212322321232
+Makgadikgadi Pans|Wildebeest=222333333332
+Cape coast|Southern right whale=000000133310
+Cape coast|Humpback whale=000002333211
+Cape coast|Cape fur seal=211111111233
+Cape coast|Cape rockjumper=321122222233
+Cape coast|Great white shark=111113332111
+Cape coast|Blue crane=322101223333
+Okavango Delta and Panhandle|African wild dog=322222222333
+Okavango Delta and Panhandle|Elephant=112223332212
+Okavango Delta and Panhandle|Red lechwe=332223333333
+Okavango Delta and Panhandle|Spotted hyena=222333323333
+Okavango Delta and Panhandle|Giraffe=223333332233
+Okavango Delta and Panhandle|Wildebeest=233333222233
+Okavango Delta and Panhandle|Kudu=333333332223
+Okavango Delta and Panhandle|Nile crocodile=111123333321
+Okavango Delta and Panhandle|Lilac-breasted roller=222333333322
+Okavango Delta and Panhandle|African fish eagle=222333333333
+Okavango Delta and Panhandle|Carmine bee-eater=332000002212
+Okavango Delta and Panhandle|White-fronted bee-eater=223322222222
+Madikwe|African wild dog=223311111122
+Madikwe|Lion=322233222133
+Madikwe|Elephant=223321110012
+Madikwe|Zebra=333333332233
+Madikwe|Giraffe=333333331233
+Madikwe|Wildebeest=233332222233
+Madikwe|Kudu=233322222222
+Madikwe|Lilac-breasted roller=333333332223
+Ongava and Etosha|Black rhino=222333333322
+Ongava and Etosha|Cheetah=233332223333
+Ongava and Etosha|Elephant=111222333321
+Ongava and Etosha|Spotted hyena=323222223333
+Ongava and Etosha|Kudu=122222333321
+Ongava and Etosha|Eland=122222333222
+Ongava and Etosha|Honey badger=223333333223
+Ongava and Etosha|Bat-eared fox=322223332333
+Ongava and Etosha|Secretarybird=222333332222
+Ongava and Etosha|Martial eagle=222222333332
+Ongava and Etosha|Blue crane=333331000123
+Ongava and Etosha|Lilac-breasted roller=123333210000
+Ongava and Etosha|Black-faced impala=233333332211
+KwaZulu-Natal and iSimangaliso|Nile crocodile=223333333222
+KwaZulu-Natal and iSimangaliso|African finfoot=322333332122
+KwaZulu-Natal and iSimangaliso|African broadbill=211222233333
+KwaZulu-Natal and iSimangaliso|Palm-nut vulture=221111123322
+KwaZulu-Natal and iSimangaliso|Humpback whale=000002332100
+KwaZulu-Natal and iSimangaliso|Narina trogon=321111123323
+Bale Mountains|Ethiopian wolf=333233332222
+Damaraland and Kunene|Desert-adapted elephant=322233333223
+Damaraland and Kunene|Black rhino=222233332222
+Damaraland and Kunene|Gemsbok=322322211233
+Damaraland and Kunene|Giraffe=333333321123
+Damaraland and Kunene|Zebra=333332322223
+Damaraland and Kunene|Kudu=322222112333
+Samburu and Laikipia|Zebra=222333322212
+Samburu and Laikipia|Eland=322333332222
+Samburu and Laikipia|Martial eagle=232212222332
+Samburu and Laikipia|Kori bustard=323333112333
+Drakensberg|Eland=233333333212
+Drakensberg|Blue crane=111000123321
+Drakensberg|Drakensberg rockjumper=332111133333
+Namib coast|Brown hyena=232233223322
+Namib coast|Cape fur seal=322322333333
+South Luangwa|Leopard=223222123332
+South Luangwa|Puku=222333333333
+South Luangwa|Hippo=222222333333
+South Luangwa|Lion=222112223332
+South Luangwa|African wild dog=332222123333
+South Luangwa|Elephant=322222322333
+South Luangwa|Buffalo=322223333333
+South Luangwa|Kudu=222222333332
+South Luangwa|Nile crocodile=222212333333
+South Luangwa|African fish eagle=332222333333
+South Luangwa|Carmine bee-eater=111110013332
+Masai Mara and Serengeti|Zebra=222223333322
+Masai Mara and Serengeti|Wildebeest=001112333211
+Masai Mara and Serengeti|Eland=222222333333
+Masai Mara and Serengeti|Nile crocodile=222233333222
+Masai Mara and Serengeti|Lilac-breasted roller=333333333322
+Masai Mara and Serengeti|African fish eagle=232222233332
+Masai Mara and Serengeti|Saddle-billed stork=222223333322
+Masai Mara and Serengeti|Grey crowned crane=333332111122
+Kasanka|Puku=233332332222
+Kafue and the Busanga Plains|Red lechwe=122112333211
+Kafue and the Busanga Plains|Lion=222222233321
+Kafue and the Busanga Plains|Puku=222222333332
+Kafue and the Busanga Plains|African fish eagle=233333332222
+Kafue and the Busanga Plains|Saddle-billed stork=333333321112
+Nyika Plateau|Roan=222233321232
+Nyika Plateau|Zebra=232333321232
+Mana Pools|African wild dog=223322233322
+Mana Pools|Hippo=333333332222
+Mana Pools|Buffalo=222233223332
+Mana Pools|Kudu=222222233322
+Mana Pools|Nile crocodile=322222332123
+Mana Pools|Lilac-breasted roller=222332222222
+Mana Pools|African fish eagle=332233332223
+Mana Pools|Southern ground hornbill=222222233322
+Mana Pools|White-fronted bee-eater=223333332222
+Liwonde and Majete|Elephant=232122332221
+Liwonde and Majete|Hippo=222222233322
+Liwonde and Majete|Kudu=333222233222
+Liwonde and Majete|Lilac-breasted roller=223332233222
+Liwonde and Majete|African fish eagle=332222233333
+Liwonde and Majete|Saddle-billed stork=333333322233
+Liwonde and Majete|Nile crocodile=222222233332
+Liwonde and Majete|Böhm's bee-eater=222222233332
+Hwange|Sable=332222233222
+Hwange|Elephant=222323332112
+Hwange|Lion=222233212222
+Hwange|Roan=322223333333
+Hwange|Zebra=223322332122
+Hwange|Giraffe=233322332233
+Hwange|Wildebeest=333322222223
+Lake Malawi|African fish eagle=222233222333
+FLAT Sabi Sand and Greater Kruger|Lion
+FLAT Sabi Sand and Greater Kruger|White rhino
+FLAT Sabi Sand and Greater Kruger|Buffalo
+FLAT Sabi Sand and Greater Kruger|Elephant
+FLAT Sabi Sand and Greater Kruger|Hippo
+FLAT Sabi Sand and Greater Kruger|Spotted hyena
+FLAT Sabi Sand and Greater Kruger|Zebra
+FLAT Sabi Sand and Greater Kruger|Giraffe
+FLAT Sabi Sand and Greater Kruger|Kudu
+FLAT Sabi Sand and Greater Kruger|Nile crocodile
+FLAT Sabi Sand and Greater Kruger|African fish eagle
+FLAT Sabi Sand and Greater Kruger|Martial eagle
+FLAT Sabi Sand and Greater Kruger|Southern ground hornbill
+FLAT Gorongosa|Hippo
+FLAT Gorongosa|Nile crocodile
+FLAT Akagera|African fish eagle
+FLAT Central Kalahari|Bat-eared fox
+FLAT Central Kalahari|Giraffe
+FLAT Central Kalahari|Kudu
+FLAT Central Kalahari|Wildebeest
+FLAT Central Kalahari|Kori bustard
+FLAT Pafuri, northern Kruger|Lilac-breasted roller
+FLAT Southern Kalahari|Meerkat
+FLAT Southern Kalahari|Secretarybird
+FLAT Southern Kalahari|Kori bustard
+FLAT Queen Elizabeth and Ishasha|Uganda kob
+FLAT Queen Elizabeth and Ishasha|Nile crocodile
+FLAT The Karoo|Cheetah
+FLAT The Karoo|Eland
+FLAT Northern Tuli and Mashatu|Giraffe
+FLAT Northern Tuli and Mashatu|Zebra
+FLAT Northern Tuli and Mashatu|Kori bustard
+FLAT Murchison Falls and Mabamba|African fish eagle
+FLAT Murchison Falls and Mabamba|Saddle-billed stork
+FLAT Cape coast|African penguin
+FLAT Cape coast|Cape sugarbird
+FLAT Okavango Delta and Panhandle|Lion
+FLAT Okavango Delta and Panhandle|Leopard
+FLAT Okavango Delta and Panhandle|Hippo
+FLAT Okavango Delta and Panhandle|Buffalo
+FLAT Okavango Delta and Panhandle|Zebra
+FLAT Okavango Delta and Panhandle|Saddle-billed stork
+FLAT Okavango Delta and Panhandle|Verreaux's eagle-owl
+FLAT Okavango Delta and Panhandle|Pel's fishing owl
+FLAT Madikwe|White rhino
+FLAT Ongava and Etosha|White rhino
+FLAT Ongava and Etosha|Lion
+FLAT Ongava and Etosha|Leopard
+FLAT Ongava and Etosha|Giraffe
+FLAT Ongava and Etosha|Zebra
+FLAT Ongava and Etosha|Wildebeest
+FLAT Ongava and Etosha|Gemsbok
+FLAT Ongava and Etosha|Kori bustard
+FLAT KwaZulu-Natal and iSimangaliso|African fish eagle
+FLAT Damaraland and Kunene|Desert-adapted lion
+FLAT Samburu and Laikipia|Gerenuk
+FLAT Samburu and Laikipia|Giraffe
+FLAT Samburu and Laikipia|Lilac-breasted roller
+FLAT Drakensberg|Bearded vulture
+FLAT South Luangwa|Giraffe
+FLAT South Luangwa|Zebra
+FLAT South Luangwa|Lilac-breasted roller
+FLAT South Luangwa|Saddle-billed stork
+FLAT South Luangwa|Southern ground hornbill
+FLAT South Luangwa|Lilian's lovebird
+FLAT South Luangwa|White-fronted bee-eater
+FLAT Masai Mara and Serengeti|Lion
+FLAT Masai Mara and Serengeti|Cheetah
+FLAT Masai Mara and Serengeti|Leopard
+FLAT Masai Mara and Serengeti|Spotted hyena
+FLAT Masai Mara and Serengeti|Giraffe
+FLAT Masai Mara and Serengeti|Martial eagle
+FLAT Masai Mara and Serengeti|Secretarybird
+FLAT Masai Mara and Serengeti|Kori bustard
+FLAT Masai Mara and Serengeti|Verreaux's eagle-owl
+FLAT Masai Mara and Serengeti|Southern ground hornbill
+FLAT Kafue and the Busanga Plains|Leopard
+FLAT Kafue and the Busanga Plains|Nile crocodile
+FLAT Kafue and the Busanga Plains|Wattled crane
+FLAT Mana Pools|Elephant
+FLAT Mana Pools|Lion
+FLAT Mana Pools|Leopard
+FLAT Mana Pools|Saddle-billed stork
+FLAT Liwonde and Majete|Zebra
+FLAT Liwonde and Majete|Lilian's lovebird
+FLAT Hwange|Lilac-breasted roller
+FLAT Hwange|Southern ground hornbill
+CURATED Masai Mara and Serengeti|Wildebeest migration=332012333312
+CURATED Liuwa Plain|Wildebeest migration=100011111232
+CURATED Makgadikgadi Pans|Zebra migration=333211122223
+CURATED Makgadikgadi Pans|Flamingo gatherings=333200000012
+CURATED Kasanka|Kasanka bat migration=100000000233
+CURATED KwaZulu-Natal and iSimangaliso|Sardine run=000013320000
+CURATED KwaZulu-Natal and iSimangaliso|Nesting turtles=332000000023
+CURATED Tofo|Whale shark=333122222333
+CURATED Tofo|Humpback whale=000013333210
+CURATED Okavango Delta and Panhandle|African skimmer=100013333332
+CURATED South Luangwa|African skimmer=100013333332
+CURATED Mana Pools|African skimmer=100013333332
+CURATED Liwonde and Majete|African skimmer=100013333332
+CURATED Mana Pools|Carmine bee-eater=332100013333
+CURATED Kafue and the Busanga Plains|Carmine bee-eater=332100013333
+CURATED Liwonde and Majete|Carmine bee-eater=332100013333

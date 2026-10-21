@@ -1,0 +1,5 @@
+{
+  "about": "Monthly sighting strength from partner camps. Each pair is 'Place|Species' (exact planner names) mapped to 12 digits, January to December: 3 = seen on most drives, 2 = often, 1 = sometimes, 0 = rarely. Partner entries override the public-record estimates in index.html. Never add exact locations.",
+  "updated": null,
+  "pairs": {}
+}

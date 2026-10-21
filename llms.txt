@@ -2,6 +2,8 @@
 
 > Wishlist Safari helps travellers plan an African safari around the wildlife they most want to see. Visitors choose species (for example lion, leopard, mountain gorilla, shoebill, brown hyena, pangolin, Pel's fishing owl, black rhino), and Wishlist Safari matches them to the regions and independent, often community-led, camps where those species are reliably seen. Wishlist Safari then introduces the traveller directly to the camps' own reservations teams, who quote and book as normal. Coverage: South Africa, Namibia, Botswana, Zimbabwe and Zambia, with more countries listed in the planner.
 
+The planner also has a "When are you travelling?" option. It ranks places by how likely each chosen species is in that month, using public sighting records (iNaturalist) and seasonal knowledge, and shows the best months for each place. Partner camps' own sightings refine this over time.
+
 ## Species guides
 - [Where to see lions in Africa](https://wishlistsafari.com/lion.html): Masai Mara and Serengeti, Okavango, Greater Kruger, Busanga Plains; best June to October.
 - [Where to see leopards in Africa](https://wishlistsafari.com/leopard.html): Sabi Sand, South Luangwa, Okavango; best May to October.
