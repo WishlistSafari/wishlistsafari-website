@@ -8,7 +8,7 @@ The planner also has a "When are you travelling?" option. It ranks places by how
 - [Where to see lions in Africa](https://wishlistsafari.com/lion.html): Masai Mara and Serengeti, Okavango, Greater Kruger, Busanga Plains; best June to October.
 - [Where to see leopards in Africa](https://wishlistsafari.com/leopard.html): Sabi Sand, South Luangwa, Okavango; best May to October.
 - [Where to see elephants in Africa](https://wishlistsafari.com/elephant.html): northern Botswana, Hwange, Mana Pools, South Luangwa, Greater Kruger; best July to October.
-- [Where to see mountain gorillas](https://wishlistsafari.com/mountain-gorilla.html): Volcanoes NP (Rwanda), Bwindi and Mgahinga (Uganda); permits about US$800 to $1,500.
+- [Where to see mountain gorillas](https://wishlistsafari.com/mountain-gorilla.html): Volcanoes NP (Rwanda), Bwindi and Mgahinga (Uganda); permits about US$1,500 in Rwanda and US$1,000 in Uganda from January 2027 (US$800 in 2026).
 - [Where to see cheetahs in southern Africa](https://wishlistsafari.com/cheetah.html): Kgalagadi, Etosha region, Busanga Plains.
 - [Where to see African wild dogs](https://wishlistsafari.com/african-wild-dog.html): northern Botswana, Hwange, Mana Pools; best June to September (denning).
 - [Where to see black rhino in Africa](https://wishlistsafari.com/black-rhino.html): Namibia's Damaraland and Etosha region.
@@ -20,7 +20,7 @@ The planner also has a "When are you travelling?" option. It ranks places by how
 - [Where to see black-maned Kalahari lions](https://wishlistsafari.com/black-maned-kalahari-lion.html): Kgalagadi Transfrontier Park; best March to May.
 - [Where to see desert-adapted elephants](https://wishlistsafari.com/desert-adapted-elephant.html): Hoanib and Huab valleys, Damaraland and Kunene, Namibia; best May to October.
 - [Where to see meerkats in the wild](https://wishlistsafari.com/meerkat.html): Makgadikgadi and the southern Kalahari; habituated colonies at dawn.
-- [Where to see chimpanzees in Africa](https://wishlistsafari.com/chimpanzee.html): Kibale (Uganda) and Nyungwe (Rwanda); Kibale permits about US$250 in 2026.
+- [Where to see chimpanzees in Africa](https://wishlistsafari.com/chimpanzee.html): Kibale (Uganda) and Nyungwe (Rwanda); Kibale permits about US$250 in 2026, US$300 from January 2027.
 - [Where to see great white sharks in South Africa](https://wishlistsafari.com/great-white-shark.html): Gansbaai and Mossel Bay; less reliable since orcas arrived around 2017.
 - [Where to see southern ground hornbills](https://wishlistsafari.com/southern-ground-hornbill.html): Greater Kruger, Pafuri, South Luangwa, Kafue, Hwange, Mana Pools.
 - [Where to see the African broadbill](https://wishlistsafari.com/african-broadbill.html): northern KwaZulu-Natal and Zimbabwe's Honde Valley; display season October to January.
