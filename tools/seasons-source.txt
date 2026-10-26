@@ -301,3 +301,16 @@ CURATED Liwonde and Majete|African skimmer=100013333332
 CURATED Mana Pools|Carmine bee-eater=332100013333
 CURATED Kafue and the Busanga Plains|Carmine bee-eater=332100013333
 CURATED Liwonde and Majete|Carmine bee-eater=332100013333
+# 26 Oct 2026: guiding-knowledge overrides where the public records ran against
+# well-established seasons. Wild dogs den roughly June to August and are most
+# reliable in the dry season; gorilla and chimp trekking is best in the two dry
+# seasons (June to September, December to February).
+CURATED Sabi Sand and Greater Kruger|African wild dog=222223333322
+CURATED South Luangwa|African wild dog=222233333322
+CURATED Gorongosa|African wild dog=222233333322
+CURATED Mana Pools|African wild dog=222233333322
+CURATED Okavango Delta and Panhandle|African wild dog=222223333322
+CURATED Madikwe|African wild dog=222223333222
+CURATED Volcanoes National Park|Mountain gorilla=332223333223
+CURATED Bwindi and Mgahinga|Mountain gorilla=332223333223
+CURATED Kibale|Chimpanzee=332223333223
