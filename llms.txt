@@ -1,6 +1,8 @@
 # Wishlist Safari
 
-> Wishlist Safari helps travellers plan an African safari around the wildlife they most want to see. Visitors choose species (for example lion, leopard, mountain gorilla, shoebill, brown hyena, pangolin, Pel's fishing owl, black rhino), and Wishlist Safari matches them to the regions and independent, often community-led, camps where those species are reliably seen. Wishlist Safari then introduces the traveller directly to the camps' own reservations teams, who quote and book as normal. Coverage: South Africa, Namibia, Botswana, Zimbabwe and Zambia, with more countries listed in the planner.
+> Wishlist Safari helps travellers plan an African safari around the wildlife they most want to see. Visitors choose species (for example lion, leopard, mountain gorilla, shoebill, brown hyena, pangolin, Pel's fishing owl, black rhino), and Wishlist Safari matches them to the regions and independent, often community-led, camps where those species are reliably seen. Wishlist Safari then introduces the traveller directly to the camps' own reservations teams, who quote and book as normal. Coverage: 12 countries, including South Africa, Namibia, Botswana, Zimbabwe, Zambia, Mozambique, Malawi, Rwanda, Uganda, Kenya, Tanzania and Ethiopia.
+
+What Wishlist Safari is not: it is not a tour operator or travel agent. It does not design itineraries, sell trips, take bookings or handle payments, and it never adds a mark-up. Travellers deal directly with each camp, at the camp's own direct rate. Partner camps pay Wishlist Safari a referral fee only when an introduced guest travels.
 
 The planner also has a "When are you travelling?" option. It ranks places by how likely each chosen species is in that month, using public sighting records (iNaturalist) and seasonal knowledge, and shows the best months for each place. Partner camps' own sightings refine this over time.
 

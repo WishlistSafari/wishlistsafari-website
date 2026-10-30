@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Wishlist Safari | Plan a safari around the wildlife you want to see</title>
-<meta name="description" content="Choose the animals and birds you most want to see in Africa. We match your wishlist to the places and independent camps where they are reliably found, and introduce you directly to the camps themselves.">
+<meta name="description" content="Choose the animals and birds you most want to see in Africa. We match your wishlist to the places and independent camps where they are reliably found, then introduce you directly to those camps, who quote and book with you themselves.">
 <link rel="canonical" href="https://wishlistsafari.com/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Wishlist Safari">
 <meta property="og:title" content="Wishlist Safari | Plan a safari around the wildlife you want to see">
-<meta property="og:description" content="Choose the animals and birds you most want to see in Africa. We match your wishlist to the places and independent camps where they are reliably found, and introduce you directly to the camps themselves.">
+<meta property="og:description" content="Choose the animals and birds you most want to see in Africa. We match your wishlist to the places and independent camps where they are reliably found, then introduce you directly to those camps, who quote and book with you themselves.">
 <meta property="og:url" content="https://wishlistsafari.com/">
 <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
 <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
@@ -152,7 +152,7 @@ form{display:flex;flex-direction:column;gap:18px}
 .updates>div,.updates form{flex:1 1 320px;min-width:0}.updates form{display:flex;flex-direction:column;gap:14px}
 .updates h3{font-size:clamp(26px,3vw,32px);margin-top:6px}
 </style>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "TravelAgency", "name": "Wishlist Safari", "url": "https://wishlistsafari.com/", "email": "hello@wishlistsafari.com", "description": "Plan an African safari around the wildlife you most want to see. Species-first matching to independent camps in South Africa, Namibia, Botswana, Zimbabwe and Zambia.", "areaServed": ["United States", "United Kingdom", "South Africa"], "sameAs": ["https://www.instagram.com/wishlistsafari", "https://www.tiktok.com/@wishlistsafari"]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Wishlist Safari", "url": "https://wishlistsafari.com/", "email": "hello@wishlistsafari.com", "description": "A species-first safari planner. Travellers choose the wildlife they most want to see in Africa, Wishlist Safari matches them to the places and independent camps where it is reliably seen, then introduces them directly to those camps, who quote and book with them. Wishlist Safari does not sell trips, design itineraries or take bookings or payments.", "sameAs": ["https://www.instagram.com/wishlistsafari", "https://www.tiktok.com/@wishlistsafari"]}</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -283,7 +283,7 @@ form{display:flex;flex-direction:column;gap:18px}
 <h2>How it works</h2>
 <div class="grid4">
 <div><h3>Your wishlist</h3><p>From the Big Five to a shoebill or a Pel's fishing owl. Choose as many as you like.</p></div>
-<div><h3>Honest matching</h3><p>We match your wishlist to the places each species is reliably found, built from guides' own sighting records as our partner camps join.</p></div>
+<div><h3>Honest matching</h3><p>We match your wishlist to the places each species is reliably found, built from public wildlife records and seasonal knowledge, and sharpened by guides' own sightings as partner camps join.</p></div>
 <div><h3>Book with the camp</h3><p>We introduce you straight to each camp's own reservations team. No middleman, and you deal with the people who know the place best.</p></div>
 <div><h3>Wildlife first</h3><p>We never share live locations, and never publish where rhino or pangolin were seen.</p></div>
 </div>
@@ -691,7 +691,7 @@ const DATA = {"groups": [{"name": "Big cats and predators", "items": [{"n": "Lio
     fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: new URLSearchParams(new FormData(form)).toString() })
       .then(function(r){ if (!r.ok) throw new Error(r.status); form.hidden = true; $('success-code').textContent = code; $('success').hidden = false; })
       .catch(function(){ fail('We could not send this just now. Please try again, or email your wishlist to hello@wishlistsafari.com.'); })
-      .then(function(){ btn.disabled = false; btn.textContent = 'Request my itinerary'; });
+      .then(function(){ btn.disabled = false; btn.textContent = 'Introduce me to the camps'; });
   });
   $('restart').addEventListener('click', function(){ form.reset(); picked = []; extra = []; chosen = null; save(); $('success').hidden = true; form.hidden = false; render(); document.getElementById('planner').scrollIntoView(); });
   [].forEach.call(document.querySelectorAll('.map-zoom button'), function(b){ b.addEventListener('click', function(){ view = b.getAttribute('data-view'); render(); }); });
