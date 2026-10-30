@@ -121,6 +121,22 @@ form{display:flex;flex-direction:column;gap:18px}
 .terms{margin:24px 0 0;padding:0;list-style:none;display:flex;flex-direction:column}
 .terms li{padding:16px 0;border-bottom:1px solid var(--line);display:flex;flex-wrap:wrap;gap:6px 24px}
 .terms b{flex:0 0 220px;font-weight:500}.terms span{flex:1 1 320px;color:var(--ink2)}
+
+.prose .combo p{color:var(--paper)}
+.nav a{display:inline-flex;align-items:center;min-height:44px;padding:0 4px}
+.site-foot{color:var(--ink2)}.site-foot a{color:var(--ink2);display:inline-flex;align-items:center;min-height:44px}
+.planner-link{margin:22px 0 0;font-size:15px;letter-spacing:.1em;text-transform:uppercase}.planner-link a{text-decoration:none;border-bottom:1px solid var(--ochre);padding-bottom:2px}
+.sample{display:flex;flex-wrap:wrap;gap:32px 56px;align-items:center}
+.sample>div{flex:1 1 360px;min-width:0}
+.sample .card{max-width:420px;box-shadow:0 8px 28px rgba(20,42,33,.08)}
+.sample .card-meta{display:flex;justify-content:space-between;gap:12px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.sample .card-meta b{font-weight:400;color:var(--ochre-text);letter-spacing:0;text-transform:none;font-size:13px}
+.sample .card h3{font-size:27px;margin-top:6px}
+.sample .tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
+.sample .months{display:grid;grid-template-columns:repeat(12,1fr);gap:2px;margin-top:14px}.sample .months i{display:block;height:7px;border-radius:1px;background:#E8ECE6}.sample .months i.l2{background:#7FA08C}.sample .months i.l3{background:var(--green)}
+.sample .best{margin:8px 0 12px;font-size:13px;color:var(--muted)}
+.sample .enq{margin-top:6px;font-size:14px;letter-spacing:.12em;text-transform:uppercase;color:var(--green)}.sample .enq span{color:var(--ochre-text)}
+.sample .badge{display:inline-flex;align-items:center;gap:6px;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--ochre-text);margin-top:12px}
 </style>
 </head>
 <body>
@@ -152,6 +168,7 @@ form{display:flex;flex-direction:column;gap:18px}
 <section class="section"><div class="wrap">
 <h2>What stays the same</h2>
 <ul class="terms">
+<li><b>The fee</b><span>Listing is free. You pay 10% of what you keep from a referred stay, only when the guest travels. Nothing on enquiries or cancellations.</span></li>
 <li><b>Bookings stay with you</b><span>Your team quotes, contracts and takes payment as usual.</span></li>
 <li><b>No exclusivity</b><span>Keep every channel you already use.</span></li>
 <li><b>Your data stays yours</b><span>We only use it to show which species are seen in which months. We never share live locations or where sensitive species such as rhino and pangolin are.</span></li>
@@ -159,6 +176,25 @@ form{display:flex;flex-direction:column;gap:18px}
 </ul>
 </div></section>
 
+<section class="section"><div class="wrap sample">
+<div>
+<p class="eyebrow">What a listing looks like</p>
+<h2>Your camp, in front of the right traveller</h2>
+<p style="color:var(--ink2);margin:14px 0 0">When a traveller's wishlist matches your area, your camp appears on the result for that place, with an "Enquire with" button that introduces them straight to your reservations team. Your camp also shows as a marked partner on the planner map, and in the species guides for what you see best.</p>
+<p class="note" style="margin:12px 0 0">Example only. Camps appear once they have signed.</p>
+</div>
+<div>
+<article class="card top" aria-label="Example place card with a partner camp">
+<div class="card-meta"><span>Zambia</span><b>3 of 3</b></div>
+<h3>South Luangwa</h3>
+<div class="tags"><span class="tag">Leopard</span><span class="tag">African wild dog</span><span class="tag">Carmine bee-eater</span></div>
+<div class="months" aria-hidden="true"><i class="l2"></i><i class="l2"></i><i class="l2"></i><i class="l2"></i><i class="l3"></i><i class="l3"></i><i class="l3"></i><i class="l3"></i><i class="l3"></i><i class="l3"></i><i class="l2"></i><i class="l2"></i></div>
+<p class="best">Best: May to Oct</p>
+<p class="badge">◆ Partner camp</p>
+<p class="enq">Enquire with [Your camp] <span>→</span></p>
+</article>
+</div>
+</div></section>
 <section class="dark"><div class="wrap" style="display:flex;flex-wrap:wrap;gap:40px">
 <div style="flex:1 1 360px;min-width:0">
 <h2>Our first partners</h2>
