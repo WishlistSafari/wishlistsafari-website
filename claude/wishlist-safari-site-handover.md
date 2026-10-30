@@ -1,7 +1,7 @@
 # Wishlist Safari site handover
 
 Source of truth for the scheduled site manager. Keep current.
-Last updated: 2026-10-29
+Last updated: 2026-10-30
 
 ## Site
 - Live at https://wishlistsafari.com, hosted on Netlify, static HTML, deployed from `main`.
@@ -47,3 +47,4 @@ Last updated: 2026-10-29
 - 2026-10-23: still blocked (curl 000 on all four URLs). Netlify get-projects "wishlist" returns empty, so forms cannot be read. Jean to link the site to the Netlify team or allow the domain.
 - 2026-10-27: still blocked (curl 000 on all four URLs, proxy refuses wishlistsafari.com). Netlify get-projects "wishlist" returns empty, so forms cannot be read. No open change requests.
 - 2026-10-29: still blocked (curl 000 on all four URLs, proxy refuses wishlistsafari.com). Netlify get-projects "wishlist" returns empty, so forms cannot be read. No open change requests.
+- 2026-10-30: still blocked (curl 000 on all four URLs, proxy refuses wishlistsafari.com). Netlify get-projects "wishlist" returns empty, so forms cannot be read. No open change requests.
