@@ -211,7 +211,7 @@ form{display:flex;flex-direction:column;gap:18px}
 <section id="planner" class="section"><div class="wrap"><div class="panel">
 <div class="panel-head">
 <div><p class="eyebrow">Step one</p><h2>Build your wishlist</h2></div>
-<div class="field search"><label for="q">Search species</label><input id="q" type="search" placeholder="e.g. hyena, owl, gorilla" autocomplete="off"></div>
+<div class="field search"><label for="q">Search species</label><input id="q" type="search" placeholder="e.g. leopard, pangolin, shoebill" autocomplete="off"></div>
 </div>
 <div class="wishbar" id="wishbar" aria-live="polite"></div>
 <div id="featured-wrap"><div class="feat-head"><h3>Most wanted</h3><span class="note">Or browse all 97 below</span></div><div class="featured" id="featured"></div></div>
@@ -800,6 +800,9 @@ const DATA = {"groups": [{"name": "Big cats and predators", "items": [{"n": "Lio
       tx.setAttribute('y', pick.toFixed(1));
     });
   }
+  (function(){ var qi = $('q'), ex = ['leopard, pangolin, shoebill', 'wild dog, black rhino, cheetah', 'mountain gorilla, whale shark', 'aardvark, brown hyena, meerkat', 'lion, elephant, Pels fishing owl'], i = 0;
+    if (!qi || (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches)) return;
+    setInterval(function(){ if (document.activeElement === qi || qi.value) return; i = (i + 1) % ex.length; qi.setAttribute('placeholder', 'e.g. ' + ex[i]); }, 3000); })();
   render(); nudgeLabels(); loadBorders(); loadSightings();
 })();
 </script>
