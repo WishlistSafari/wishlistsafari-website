@@ -155,7 +155,7 @@ form{display:flex;flex-direction:column;gap:18px}
 <li><b>Bookings stay with you</b><span>Your team quotes, contracts and takes payment as usual.</span></li>
 <li><b>No exclusivity</b><span>Keep every channel you already use.</span></li>
 <li><b>Your data stays yours</b><span>We only use it to show which species are seen in which months. We never share live locations or where sensitive species such as rhino and pangolin are.</span></li>
-<li><b>Simple terms</b><span>We'll take you through them on a short call.</span></li>
+<li><b>Simple terms</b><span>We'll send them to you by email.</span></li>
 </ul>
 </div></section>
 
@@ -174,7 +174,7 @@ form{display:flex;flex-direction:column;gap:18px}
 <div>
 <p class="eyebrow">Get in touch</p>
 <h2>Become a partner</h2>
-<p style="color:var(--ink2);margin:14px 0 0">Tell us a little about your camp and the species your guides know best, and we'll arrange a 20-minute call. If you'd rather email, write to hello@wishlistsafari.com.</p>
+<p style="color:var(--ink2);margin:14px 0 0">Tell us a little about your camp and the species your guides know best, and we'll reply by email with our short partner terms. You can also write to hello@wishlistsafari.com.</p>
 </div>
 <div>
 <form id="partner" name="partner-enquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate>
@@ -192,11 +192,11 @@ form{display:flex;flex-direction:column;gap:18px}
 <div class="field"><label for="p-msg">Anything else?</label><textarea id="p-msg" name="message"></textarea></div>
 <label class="check"><input type="checkbox" id="p-consent" name="consent" value="yes"><span>I agree that Wishlist Safari may contact me about partnering, as set out in the <a href="privacy.html">privacy notice</a>.</span></label>
 <p class="error" id="p-error" hidden></p>
-<button class="btn btn-dark" type="submit" style="align-self:flex-start">Request a call</button>
+<button class="btn btn-dark" type="submit" style="align-self:flex-start">Send</button>
 </form>
 <div class="success" id="p-success" hidden>
 <h3 style="font-size:32px">Thank you</h3>
-<p>We'll be in touch shortly to arrange a call.</p>
+<p>Thank you. We'll be in touch by email shortly.</p>
 </div>
 </div>
 </div></section>
@@ -221,7 +221,7 @@ form{display:flex;flex-direction:column;gap:18px}
     fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: new URLSearchParams(new FormData(f)).toString() })
       .then(function(r){ if (!r.ok) throw new Error(r.status); f.hidden = true; document.getElementById('p-success').hidden = false; })
       .catch(function(){ fail('We could not send this just now. Please email hello@wishlistsafari.com instead.'); })
-      .then(function(){ b.disabled = false; b.textContent = 'Request a call'; });
+      .then(function(){ b.disabled = false; b.textContent = 'Send'; });
   });
 })();
 </script>
