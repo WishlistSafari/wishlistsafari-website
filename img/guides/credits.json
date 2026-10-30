@@ -1,0 +1,4 @@
+{
+  "_about": "One photo per species guide. Key = guide file stem (e.g. shoebill). Put the image at img/guides/<stem>.jpg (about 1600px wide, under 250 KB), fill in the credit, then run: python3 tools/build_guide_photos.py",
+  "photos": {}
+}
