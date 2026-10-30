@@ -25,7 +25,7 @@ for f in sorted(ROOT.glob('*.html')):
         fig = ('<!--photo:start--><figure class="guide-photo"><img src="img/guides/%s.jpg" alt="%s" '
                'width="1600" height="1067" loading="lazy"><figcaption>%s</figcaption></figure><!--photo:end-->'
                % (f.stem, html.escape(p.get('alt', '')), cap))
-        m = re.search(r'<div class="answer">.*?</div></div>|<div class="answer">.*?</div>', s, re.S)
+        m = re.search(r'<div class="answer">.*?</div>', s, re.S)
         if m:
             s = s[:m.end()] + '\n' + fig + s[m.end():]
             if 'id="photo-css"' not in s: s = s.replace('</head>', CSS + '\n</head>', 1)
