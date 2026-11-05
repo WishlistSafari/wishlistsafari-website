@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Wishlist Safari | Plan a safari around the wildlife you want to see</title>
-<meta name="description" content="Choose the animals and birds you most want to see in Africa. We match your wishlist to the places and independent camps where they are reliably found, then introduce you directly to those camps, who quote and book with you themselves.">
+<meta name="description" content="Choose the animals and birds you most want to see in Africa. We match your wishlist to the places and camps where they are reliably found, then introduce you directly to those camps, who quote and book with you themselves.">
 <link rel="canonical" href="https://wishlistsafari.com/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Wishlist Safari">
 <meta property="og:title" content="Wishlist Safari | Plan a safari around the wildlife you want to see">
-<meta property="og:description" content="Choose the animals and birds you most want to see in Africa. We match your wishlist to the places and independent camps where they are reliably found, then introduce you directly to those camps, who quote and book with you themselves.">
+<meta property="og:description" content="Choose the animals and birds you most want to see in Africa. We match your wishlist to the places and camps where they are reliably found, then introduce you directly to those camps, who quote and book with you themselves.">
 <meta property="og:url" content="https://wishlistsafari.com/">
 <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
 <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
@@ -182,7 +182,7 @@ form{display:flex;flex-direction:column;gap:18px}
 .about ul{margin:14px 0 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:10px}
 .about li{padding-left:18px;position:relative;color:var(--ink2)}.about li:before{content:'';position:absolute;left:0;top:.7em;width:8px;height:1.5px;background:var(--ochre)}
 </style>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Wishlist Safari", "url": "https://wishlistsafari.com/", "email": "hello@wishlistsafari.com", "description": "A species-first safari planner. Travellers choose the wildlife they most want to see in Africa, Wishlist Safari matches them to the places and independent camps where it is reliably seen, then introduces them directly to those camps, who quote and book with them. Wishlist Safari does not sell trips, design itineraries or take bookings or payments.", "sameAs": ["https://wishlistsafari.substack.com/", "https://www.instagram.com/wishlistsafari", "https://www.tiktok.com/@wishlistsafari"]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Wishlist Safari", "url": "https://wishlistsafari.com/", "email": "hello@wishlistsafari.com", "description": "A species-first safari planner. Travellers choose the wildlife they most want to see in Africa, Wishlist Safari matches them to the places and camps where it is reliably seen, then introduces them directly to those camps, who quote and book with them. Wishlist Safari does not sell trips, design itineraries or take bookings or payments.", "sameAs": ["https://wishlistsafari.substack.com/", "https://www.instagram.com/wishlistsafari", "https://www.tiktok.com/@wishlistsafari"]}</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -199,7 +199,7 @@ form{display:flex;flex-direction:column;gap:18px}
 <section class="hero"><div class="wrap hero-grid">
 <div>
 <h1>Name the animal.<br><em>We'll find the place.</em></h1>
-<p class="lede">Choose the wildlife you most want to see. We match your wishlist to the places, and the independent camps, where it is most reliably seen. Then we introduce you directly to the camps' own reservations teams.</p>
+<p class="lede">Choose the wildlife you most want to see. We match your wishlist to the places, and the camps, where it is most reliably seen. Then we introduce you directly to the camps' own reservations teams.</p>
 </div>
 <div class="stats">
 <p><b>98</b><span>Species</span></p>
@@ -357,7 +357,7 @@ form{display:flex;flex-direction:column;gap:18px}
 <p class="eyebrow">About Wishlist Safari</p>
 <h2>Built for travellers who dream in species</h2>
 <p>Most safari sites sell places. But people dream in animals: the leopard on a branch, the shoebill in the reeds, the pangolin they have waited a lifetime to see. Wishlist Safari starts there, and points you to where each one is most reliably seen.</p>
-<p>We are independent and based in Cape Town, and we work with small, independent and community-owned camps whose guides know their wildlife best.</p>
+<p>We are independent and based in Cape Town, and we especially look for smaller, family-run and community-owned camps whose guides know their wildlife best.</p>
 </div>
 <div>
 <p class="eyebrow">What we are, and are not</p>
@@ -563,7 +563,7 @@ const DATA = {"groups": [{"name": "Big cats and predators", "items": [{"n": "Lio
         card.appendChild(el('p', {'class':'best'}, bt));
       }
       var lodgesHere = (DATA.lodges || []).filter(function(l){ return l.region === x.r.name; });
-      if (!lodgesHere.length) card.appendChild(el('p', {'class':'camps-line'}, 'Independent camps here: we introduce you on request.'));
+      if (!lodgesHere.length) card.appendChild(el('p', {'class':'camps-line'}, 'Camps here: we introduce you on request.'));
       lodgesHere.forEach(function(l){
         var lb = el('a', {'class':'linkbtn','href':'#plan','style':'margin-bottom:10px'}, 'Enquire with ' + l.name + ' '); lb.appendChild(el('span', null, '→'));
         lb.addEventListener('click', function(){ chosen = l.name + ', ' + x.r.name + ' (' + x.r.country + ')'; renderSummary(res); });
