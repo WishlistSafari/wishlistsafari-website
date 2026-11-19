@@ -1,7 +1,7 @@
 # Wishlist Safari site handover
 
 Source of truth for the scheduled site manager. Keep current.
-Last updated: 2026-11-18
+Last updated: 2026-11-19
 
 ## Site
 - Live at https://wishlistsafari.com, hosted on Netlify, static HTML, deployed from `main`.
@@ -40,6 +40,7 @@ Last updated: 2026-11-18
 - 2026-10-17: Northern Tuli and Mashatu added.
 - 2026-10-17: this doc and the change request list created.
 - 2026-11-17: LinkedIn page (linkedin.com/company/wishlist-safari) added to all footers, Organization structured data and llms.txt (commit f1c92a8, made outside the change request list).
+- 2026-11-18: site review fixes (sitemap, meta lengths, About wording, great white wording, one-line phone nav, commit 0567f7f) and location removed from the About line (commit a480de0). Both made outside the change request list.
 
 ## Known limits
 - The cloud sandbox blocked wishlistsafari.com on 2026-10-17, so live health checks need network access allowed.
@@ -60,3 +61,4 @@ Last updated: 2026-11-18
 - 2026-11-16: still blocked (curl 000 on all four URLs). Netlify get-projects "wishlist" returns empty, so forms cannot be read. Repo checks fine: 26 HTML files, all three forms keep form-name and honeypot. No open change requests.
 - 2026-11-17: still blocked (curl 000 on all four URLs). Netlify get-projects "wishlist" returns empty, so forms cannot be read. Repo checks fine: 26 HTML files, all three forms keep form-name and honeypot. No open change requests.
 - 2026-11-18: still blocked (curl 000 on all four URLs, proxy refuses wishlistsafari.com). Netlify get-projects returns empty, so forms cannot be read. Repo checks fine: 26 HTML files, no script errors on the four checked pages, all three forms keep form-name and honeypot. No open change requests.
+- 2026-11-19: still blocked (curl 000 on all four URLs, proxy refuses wishlistsafari.com). Netlify get-projects returns empty, so forms cannot be read. Repo checks fine: 26 HTML files, sitemap and llms.txt cover all indexable pages, no script errors on the four checked pages, all three forms keep form-name and honeypot. No open change requests.
