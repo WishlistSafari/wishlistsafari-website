@@ -1,7 +1,7 @@
 # Wishlist Safari site handover
 
 Source of truth for the scheduled site manager. Keep current.
-Last updated: 2026-11-26
+Last updated: 2026-11-27
 
 ## Site
 - Live at https://wishlistsafari.com, hosted on Netlify, static HTML, deployed from `main`.
@@ -65,3 +65,4 @@ Last updated: 2026-11-26
 - 2026-11-20: still blocked (curl 000 on all four URLs). Netlify get-projects returns empty, so forms cannot be read and no weekly tally is possible. Repo checks fine: 26 HTML files, all three forms keep form-name and honeypot. No open change requests.
 - 2026-11-25: still blocked (curl 000 on all four URLs; WebFetch cannot resolve wishlistsafari.com). Netlify get-projects returns empty, so forms cannot be read. Repo checks fine: 26 HTML files, no script errors on the four checked pages, sitemap and llms.txt cover all indexable pages, all three forms keep form-name and honeypot. No open change requests.
 - 2026-11-26: still blocked (curl 000 on all four URLs). Netlify get-projects returns empty, so forms cannot be read. Repo checks fine: 26 HTML files, no script errors on the four checked pages, all three forms keep form-name and honeypot. No open change requests.
+- 2026-11-27: still blocked (curl 000 on all four URLs). Netlify get-projects returns empty, so forms cannot be read and no weekly tally is possible. Repo checks fine: 26 HTML files, all three forms keep form-name and honeypot. No open change requests.
